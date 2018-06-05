@@ -13,7 +13,7 @@ myImage.onclick = function() {
 }
 
 function setUserName() {
-  var myName = prompt('Please enter your name.');
+  var myName = prompt('Please enter your name.') || "Unidentified User";
   localStorage.setItem('name', myName);
   myHeading.textContent = 'Welcome ' + myName;
 }
