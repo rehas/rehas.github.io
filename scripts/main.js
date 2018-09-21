@@ -28,3 +28,16 @@ if(!localStorage.getItem('name')) {
 myButton.onclick = function() {
   setUserName();
 }
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  
+  let c = 5.0
+
+  setInterval( timer => {
+    document.getElementById('counter').innerHTML = c.toFixed(1);
+    c = c-0.5;
+    if(c <0.5 ){
+      window.location = 'http://www.brsonmez.com'
+    }
+  }, 500)
+});
